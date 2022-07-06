@@ -1,0 +1,199 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Variáveis de personalização */
+html {
+    --bg-color: url("https://i0.wp.com/cbdn.org.br/wp-content/uploads/sites/6/2018/01/zermatt-credito-Leander-Wenger-capa.jpg");
+    --color-UserName: rgba(240, 240, 240, 0.9);
+    --color-UserMentionAndBorder: #fa9f9f;
+    --color-buttons: #fa9f9f;
+    --color-UserMentionDark: #ff7777;
+    --text-color: #FFF;
+    --text-color-Credits: rgba(195, 194, 194, 1);
+    --bg-card-color: rgba(255, 255, 255, 0.1);
+    --box-shadow-color: rgba(0, 0, 0, 0.7);
+    --box-shadow-buttons: 0px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Personalização com tema roxo (purple)*/
+body.purple {
+    --bg-color: url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80");
+    --color-UserName: rgba(255, 255, 255, 0.6);
+    --color-UserMentionAndBorder: rgba(146, 44, 147, 1);
+    --color-buttons: rgba(160, 58, 159, 1);
+    --color-UserMentionDark: rgba(173, 71, 172);
+    --text-color: #FFF;
+    --text-color-Credits: rgba(255, 255, 255, 0.7);
+    --bg-card-color: rgba(133, 29, 134, 0.01);
+    --box-shadow-color: 0px 15px 25px rgba(186, 54, 230, 0.5);
+    --box-shadow-buttons: 5px 15px 20px rgba(186, 58, 184, 0.95);
+}
+
+/* Personalização com tema escuro (dark)*/
+body.dark {
+    --bg-color: rgb(0, 0, 0);
+    --color-UserName: rgba(240, 240, 240, 0.9);
+    --color-UserMentionAndBorder: #00ffd0;
+    --color-buttons: #00d0aa;
+    --color-UserMentionDark: #00b090;
+    --text-color: #FFF;
+    --text-color-Credits: rgba(195, 194, 194, 1);
+    --bg-card-color: rgba(166, 166, 166, 0.1);
+    --box-shadow-color: 2px -5px 35px rgba(120, 255, 251, 0.9);
+    --box-shadow-buttons: 5px 15px 20px rgba(123, 255, 231, 0.3);
+}
+
+/* Personalização com tema amarelo (yellow)*/
+body.whiteRed {
+    --bg-color: rgba(255, 255, 255, 1);
+    --color-UserName: rgba(0, 0, 0, 1);
+    --color-UserMentionAndBorder: rgba(255, 0, 0, 0.8);
+    --color-buttons: rgba(255, 0, 0, 1);
+    --color-UserMentionDark: rgba(230, 0, 0, 1);
+    --text-color: rgba(0, 0, 0, 1);
+    --text-color-Credits: rgba(0, 0, 0, 1);
+    --bg-card-color: rgba(45, 45, 45, 0.02);
+    --box-shadow-color: 2px 5px 35px rgba(45, 45, 45, 0.7);
+    --box-shadow-buttons: 5px 15px 20px rgba(55, 55, 55, 0.4);
+}
+
+/* Personalização com tema Laranja (orange)*/
+body.yellow {
+    --bg-color: rgba(0, 0, 0, 1);
+    --color-UserName: rgba(255, 255, 255, 1);
+    --color-UserMentionAndBorder: rgba(249, 156, 6, 1);
+    --color-buttons: rgba(249, 156, 6, 1);
+    --color-UserMentionDark: #;
+    --text-color: rgba(255, 255, 255, 1);
+    --text-color-Credits: rgba(255, 255, 255, 1);
+    --bg-card-color: rgba(50, 50, 50, 0.2);
+    --box-shadow-color: 5px 10px 35px rgba(255, 165, 0, 0.65);
+    --box-shadow-buttons: 5px 15px 20px rgba(255, 165, 0, 0.50);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    background-size: cover;
+}
+
+/* caixa que contém informações sobre o usuário*/
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    max-height: 550px;
+
+    border-radius: 20px;
+    background: var(--bg-card-color);
+    backdrop-filter: blur(15px);
+    box-shadow: var(--box-shadow-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* imagem que o usuário pode colocar. */
+.avatar {
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    max-height: 100px;
+    border-radius: 50%;
+    border: 6px solid var(--color-UserMentionAndBorder);
+    padding: 4px;
+    margin-bottom: 8px ;
+}
+
+/* Nome do usuário. */
+.userName {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 37.5px;
+    color: var(--color-UserName);
+}
+
+/* nome do usuário em formato de menção @ ou tag #. */
+.userMention {
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration: none;
+    margin-bottom: 40px;
+    color: var(--color-UserMentionAndBorder);
+}
+
+.userMention:hover {
+    color: var(--color-UserMentionDark);
+}
+
+/* remoção dos º que cada linha da lista recebe automaticamente */
+.listLinks {
+    list-style: none;
+}
+
+/* definição dos botões e suas distâncias buscando responsividade */
+.listButtonsLinks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.links {
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    max-height: 53px;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-buttons);
+    border-radius: 8px;
+    padding: 16px 80px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 300ms;
+}
+
+#icons {
+    width: 20px;
+    height: 20px;
+}
+
+/* alteração de cor quando o botão estiver com o cursor acima */
+.links:hover {
+    background: var(--color-buttons);
+}
+
+/* creditos do desenvolvedor ou do usuário.*/
+.footerCredits {
+    position: relative;
+    top: 10%;
+}
+
+.linkCredits {
+    position: relative;
+    font-weight: 500;
+    color: var(--text-color-Credits);
+    font-size: 12px;
+}
+
+.usersCredits {
+    text-decoration: none;
+    color: var(--color-UserMentionAndBorder);
+    font-weight: bold;
+}
