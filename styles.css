@@ -18,6 +18,21 @@ html {
     --box-shadow-color: 0px 15px 25px rgba(0, 0, 0, 0.7);
     --box-shadow-buttons: 0px 15px 25px rgba(0, 0, 0, 0.4);
 }
+/* tema para a configuração dark do dispositivo ou sistema */
+@media (prefers-color-scheme: dark) {
+    html {
+        --bg-color: url("https://cdn.pixabay.com/photo/2021/01/07/13/24/hut-5897221_960_720.jpg");
+        --color-UserName: rgba(240, 240, 240, 0.97);
+        --color-UserMentionAndBorder: rgba(34, 255, 0, 0.95);
+        --color-buttons: rgba(34, 255, 0, 0.76);
+        --color-UserMentionDark: rgb(27, 203, 0, 0.99);
+        --text-color: rgba(255, 255, 255, 1);
+        --text-color-Credits: rgba(255, 255, 255, 0.70);
+        --bg-card-color: rgba(255, 255, 255, 0.03);
+        --box-shadow-color: 0px 13px 25px rgba(255, 255, 255, 0.75);
+        --box-shadow-buttons: 5px 10px 25px rgba(255, 255, 255, 0.75)
+    }
+}
 
 /* Personalização com tema roxo (purple)*/
 body.purple {
