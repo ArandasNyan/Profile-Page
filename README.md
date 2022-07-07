@@ -1,4 +1,4 @@
-<h1 align="center" color="purple">
+<h1 align="center">
     Rocket Links 🚀
 </h1>
 
